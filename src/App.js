@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavBar />
     </div>
   );
 }
 
-export default App;
+function NavBar() {
+  const todayDate = new Date();
+
+  const formattedDate = todayDate
+    .toLocaleDateString("ar-EG", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+    })
+    .replace("،", " ·");
+  return (
+    <>
+      <header className="nav-container">
+        <nav>
+          <ul>
+            <li className="Logo">ذِكر</li>
+            <li className="date-dkrAllah">
+              <span className="today-date">{formattedDate}</span>
+              <span className="under-date-dkr">حصن يومك بذكر الله</span>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </>
+  );
+}
