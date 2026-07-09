@@ -1,3 +1,7 @@
+:root {
+  font-feature-settings: "ss01", "cv01";
+  font-variant-numeric: traditional-or-simplified;
+}
 * {
   padding: 0;
   margin: 0;
@@ -13,7 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 100px;
+  gap: 50px;
   min-height: 100vh;
   width: 100%;
 }
@@ -164,4 +168,13 @@ body {
   border-radius: 50%;
   background: #25352e;
   box-shadow: inset -14px 8px 0 0 #c79a45;
+}
+
+.footer {
+  display: flex;
+  height: 20vh;
+  align-items: center;
+  color: #c79a45;
+  font-size: 32px;
+  font-family: "Amiri";
 }
