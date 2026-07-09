@@ -9,11 +9,20 @@ body {
   min-height: 100vh;
   background: radial-gradient(1000px 700px at 50% -5%, #16281f, #0a1512);
 }
-
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  min-height: 100vh;
+  width: 100%;
+}
 .nav-container {
-  margin-top: 20px;
   color: white;
   padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto 0 auto;
 }
 
 .nav-container ul {
@@ -44,4 +53,115 @@ body {
 }
 .Logo {
   font-size: 40px;
+}
+
+@media (min-width: 1400px) {
+  .nav-container ul {
+    justify-content: space-between;
+  }
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 100px auto 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.hero-first-tilte {
+  color: #d9b65e;
+  font-size: 20px;
+  font-family: "Noto Kufi Arabic";
+  font-weight: 300;
+}
+
+.main-titel {
+  font-size: 42px;
+  font-family: "amiri";
+  font-weight: 700;
+  color: #f5efe1;
+}
+
+.expalane-theapp {
+  color: #8fa096;
+  font-family: "Noto Kufi Arabic";
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.sun-Logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 38%, #ebc97e, #c79a45);
+  box-shadow: 0 0 28px rgba(217, 168, 78, 0.4);
+}
+
+.adkar-components {
+  display: flex;
+  flex-direction: column;
+  width: 390px;
+  height: 272px;
+  border-radius: 20px;
+  background-color: #16281f;
+  border: 1px solid #b8944d47;
+  padding: 28px;
+  gap: 10px;
+}
+
+.first-line-adkar-components {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.adkar-components-track {
+  display: flex;
+  flex-direction: column;
+  color: #d9b65e;
+  font-family: "Noto Kufi Arabic";
+}
+
+.adkar-components-title {
+  font-family: reem Kufi;
+  font-size: 24px;
+  font-weight: 600;
+  color: #f5efe1;
+}
+
+.adkar-components-sub-title {
+  font-family: "Noto Kufi Arabic", sans-serif;
+  color: #8fa096;
+  font-size: 16px;
+}
+
+.adkar-components-btn {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Noto Kufi Arabic";
+  width: 332px;
+  height: 52px;
+  color: #14231f;
+  background-color: #d9b65e;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.Adkar-Components-Continer {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.moon-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #25352e;
+  box-shadow: inset -14px 8px 0 0 #c79a45;
 }
