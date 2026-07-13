@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Landingpage() {
   return (
     <div className="app-container">
@@ -55,17 +57,19 @@ function AdkarComponentsContiner() {
         adkarName="أذكار الصباح"
         adkarTime="من طلوع الفجر حتى العصر"
         timeLogo="sun-Logo"
+        page="/morning"
       />
       <AdkarComponents
         adkarName="أذكار المساء"
         adkarTime="من صلاة العصر  حتى الفجر"
         timeLogo="moon-logo"
+        page="/evening"
       />
     </div>
   );
 }
 
-function AdkarComponents({ adkarName, adkarTime, timeLogo }) {
+function AdkarComponents({ adkarName, adkarTime, timeLogo, page }) {
   return (
     <>
       <div className="adkar-components">
@@ -73,12 +77,14 @@ function AdkarComponents({ adkarName, adkarTime, timeLogo }) {
           <div className={timeLogo}></div>
           <div className="adkar-components-track">
             <span>اكتمل اليوم</span>
-            <span>13/2</span>
+            <span>13/0</span>
           </div>
         </div>
         <h3 className="adkar-components-title">{adkarName}</h3>
         <p className="adkar-components-sub-title">{adkarTime}</p>
-        <button className="adkar-components-btn">ابدأ الورد </button>
+        <Link to={page}>
+          <button className="adkar-components-btn">ابدأ الورد </button>
+        </Link>
       </div>
     </>
   );
