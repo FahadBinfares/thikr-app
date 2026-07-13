@@ -178,3 +178,151 @@ body {
   font-size: 32px;
   font-family: "Amiri";
 }
+
+.Dhikr-first-line {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0px 16px;
+  width: 100%;
+}
+
+.Dhikr-type-and-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-family: "Noto Kufi Arabic", sans-serif;
+}
+
+.Dhikr-type-and-index h2 {
+  font-size: 19px;
+}
+
+.main-Dhikr-Component {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.Dhikr-first-line span,
+.Dhikr-first-line button {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgb(28, 51, 44);
+  border: 1px solid rgba(184, 148, 77, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(217, 182, 94);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.tag-time-to-read {
+  display: inline-block;
+  background: rgba(184, 148, 77, 0.14);
+  color: rgb(217, 182, 94);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(184, 148, 77, 0.28);
+}
+
+.ayah {
+  font-family: Amiri, serif;
+  font-size: clamp(22px, 4.5vw, 29px);
+  line-height: 2.05;
+  color: rgb(245, 239, 225);
+  text-align: center;
+  white-space: pre-line;
+}
+
+.benefits-of-ayah {
+  color: rgb(126, 140, 130);
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dhikr-repet-times {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(
+    rgb(33, 51, 37) 360deg,
+    rgba(255, 255, 255, 0.08) 0deg
+  );
+  border: 1px solid #ebc97e;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  animation: 3.5s ease-in-out 0s infinite normal none running;
+  font-size: 30px;
+  color: #d9b65e;
+}
+
+.Dhikr-Content-container {
+  flex: 1 1 0%;
+  background: linear-gradient(rgb(22, 40, 31), rgb(17, 32, 26));
+  border: 1px solid rgba(184, 148, 77, 0.18);
+  border-radius: 24px;
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  gap: 40px;
+}
+
+.ayah-btn-benfits-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.move-back-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.move-btn {
+  flex: 1;
+  background-color: #c79a45;
+  height: 50px;
+  border-radius: 16px;
+  font-size: 20px;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  border: none;
+}
+
+.back-btn {
+  flex: 0.6;
+  background-color: #284738;
+  border-radius: 16px;
+  font-size: 20px;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  color: #d9b65e;
+  border: none;
+}
+
+.back-main-btn {
+  height: 40px;
+  width: 40px;
+  font-size: 24px !important;
+  font-weight: bold;
+}
