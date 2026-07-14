@@ -1,4 +1,3 @@
-import { useState } from "react";
 import adhkar from "../Data/ar.json";
 import DhikrTemplate from "./DhikrTemplate.js";
 
