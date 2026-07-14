@@ -47,4 +47,4 @@ Adkar Component
 
 ## 🌐 Live Demo
 
-(Add your deployment link here after publishing.)
+(https://thikr-app-indol.vercel.app/)
