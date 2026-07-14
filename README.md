@@ -38,8 +38,8 @@ The adhkar content is based on (https://github.com/Seen-Arabic/Morning-And-Eveni
 
 ## 📸 Preview
 
-![]Landing-page(./public/Landing-page.png)
-![]adkar-com(./public/adkar-com.png)
+![Landing Page](./public/Landing-page.png)
+![Adkar](./public/adkar-com.png)
 
 ## 🌐 Live Demo
 
