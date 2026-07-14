@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 function Landingpage() {
   return (
     <div className="app-container">
@@ -69,16 +68,13 @@ function AdkarComponentsContiner() {
   );
 }
 
-function AdkarComponents({ adkarName, adkarTime, timeLogo, page }) {
+function AdkarComponents({ adkarName, adkarTime, timeLogo, page, AdhkarData }) {
   return (
     <>
       <div className="adkar-components">
         <div className="first-line-adkar-components">
           <div className={timeLogo}></div>
-          <div className="adkar-components-track">
-            <span>اكتمل اليوم</span>
-            <span>13/0</span>
-          </div>
+          <div className="adkar-components-track"></div>
         </div>
         <h3 className="adkar-components-title">{adkarName}</h3>
         <p className="adkar-components-sub-title">{adkarTime}</p>
