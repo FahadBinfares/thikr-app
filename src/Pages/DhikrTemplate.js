@@ -7,6 +7,7 @@ export default function DhikrTemplate({ adhkar, adhkarType, adhkarCount }) {
   const [process, setprocess] = useState(0);
   const [counter, setCounter] = useState(adhkar[0].count);
   const [Progress, setProgress] = useState(0);
+  const [finsh, setFinsh] = useState(false);
 
   function HandelPeogress(currentProcess) {
     setProgress(Math.round((currentProcess / adhkarCount) * 100));
@@ -18,6 +19,8 @@ export default function DhikrTemplate({ adhkar, adhkarType, adhkarCount }) {
       const next = process + 1;
       setCounter(adhkar[next].count);
       HandelPeogress(next);
+    } else {
+      setFinsh(true);
     }
   }
 
@@ -55,8 +58,10 @@ export default function DhikrTemplate({ adhkar, adhkarType, adhkarCount }) {
         process={process}
         setCounter={HandelCountForDhikd}
         counter={counter}
+        finsh={finsh}
       />
       <BtnMoveAndBack
+        finsh={finsh}
         HandelProcess={HandelProcess}
         HandelProcessBack={HandelProcessBack}
       />
@@ -81,32 +86,57 @@ function DhikrMainComponent({ adhkarType, adhkarCount, process, Progress }) {
   );
 }
 
-function DhikrContent({ data, process, setCounter, counter }) {
+function DhikrContent({
+  data,
+  process,
+  setCounter,
+  counter,
+  adhkarCount,
+  finsh,
+}) {
   return (
-    <div className="Dhikr-Content-container">
-      <div className="tag-time-to-read">{data[process].count_description}</div>
-
-      <div className="ayah-btn-benfits-container">
-        <p className="ayah">{data[process].content}</p>
-        <span className="benefits-of-ayah">{data[process].fadl}</span>
-      </div>
-
-      <button onClick={setCounter} className="dhikr-repet-times">
-        {counter}
-      </button>
+    <div className="finsh">
+      {finsh ? (
+        <h1 className="finsh-massge">الله يتقبل</h1>
+      ) : (
+        <div className="Dhikr-Content-container">
+          <div className="tag-time-to-read">
+            {data[process].count_description}
+          </div>
+          <div className="ayah-btn-benfits-container">
+            <p className="ayah">{data[process].content}</p>
+            <span className="benefits-of-ayah">{data[process].fadl}</span>
+          </div>
+          <button onClick={setCounter} className="dhikr-repet-times">
+            {counter}
+          </button>
+        </div>
+      )}
     </div>
   );
 }
 
-function BtnMoveAndBack({ HandelProcess, HandelProcessBack }) {
+function BtnMoveAndBack({ HandelProcess, HandelProcessBack, finsh }) {
   return (
-    <div className="move-back-container">
-      <button onClick={HandelProcessBack} className="back-btn">
-        السابق
-      </button>
-      <button onClick={HandelProcess} className="move-btn">
-        التالي
-      </button>
-    </div>
+    <>
+      {finsh ? (
+        <div className="move-back-container">
+          <Link to="/">
+            <button className="back-to-main-page-btn">
+              الذهاب الى الصفحة الرئيسية
+            </button>
+          </Link>
+        </div>
+      ) : (
+        <div className="move-back-container">
+          <button onClick={HandelProcessBack} className="back-btn">
+            السابق
+          </button>
+          <button onClick={HandelProcess} className="move-btn">
+            التالي
+          </button>
+        </div>
+      )}
+    </>
   );
 }
