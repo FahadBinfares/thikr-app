@@ -1,5 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 
 import LandingPage from "./Pages/LandingPage";
 import MorningDhikrPage from "./Pages/MorningDhikrPage";
@@ -13,6 +14,7 @@ export default function App() {
         <Route path="/morning" element={<MorningDhikrPage />} />
         <Route path="/evening" element={<EveningDhikrPage />} />
       </Routes>
+      <Analytics />
     </BrowserRouter>
   );
 }
