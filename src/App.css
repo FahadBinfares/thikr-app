@@ -339,6 +339,7 @@ button {
   width: 40px;
   font-size: 24px !important;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .finsh {
@@ -347,6 +348,10 @@ button {
   min-height: 600px;
   align-items: center;
   justify-content: center;
+}
+
+.router-Links {
+  text-decoration: none;
 }
 
 /* @media (min-width: 1400px) {

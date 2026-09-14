@@ -72,7 +72,7 @@ export default function DhikrTemplate({ adhkar, adhkarType, adhkarCount }) {
 function DhikrMainComponent({ adhkarType, adhkarCount, process, Progress }) {
   return (
     <div className="Dhikr-first-line">
-      <Link to="/">
+      <Link className="router-Links" to="/">
         <button className="back-main-btn">→</button>
       </Link>
       <div className="Dhikr-type-and-index">

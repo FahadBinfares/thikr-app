@@ -7,10 +7,18 @@ const EveningAdhkar = adhkar.filter(
 
 export default function EveningDhikr() {
   return (
-    <DhikrTemplate
-      adhkar={EveningAdhkar}
-      adhkarType="اذكار المساء"
-      adhkarCount={EveningAdhkar.length - 1}
-    />
+    <>
+      <title>أذكار المساء</title>
+
+      <meta
+        name="description"
+        content="اقرأ أذكار المساء مكتوبة كاملة مع عدد التكرار بطريقة سهلة وواضحة."
+      />
+      <DhikrTemplate
+        adhkar={EveningAdhkar}
+        adhkarType="اذكار المساء"
+        adhkarCount={EveningAdhkar.length - 1}
+      />
+    </>
   );
 }

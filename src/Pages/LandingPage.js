@@ -1,12 +1,20 @@
 import { Link } from "react-router-dom";
 function Landingpage() {
   return (
-    <div className="app-container">
-      <NavBar />
-      <HeroPart />
-      <AdkarComponentsContiner />
-      <Footer />
-    </div>
+    <>
+      <title>أذكار الصباح والمساء مكتوبة مع عداد | ذِكر</title>
+
+      <meta
+        name="description"
+        content="اقرأ أذكار الصباح والمساء مكتوبة مع عدد التكرار، واستخدم عدادًا بسيطًا لمتابعة وردك اليومي."
+      />
+      <div className="app-container">
+        <NavBar />
+        <HeroPart />
+        <AdkarComponentsContiner />
+        <Footer />
+      </div>
+    </>
   );
 }
 
