@@ -11,14 +11,13 @@
 
 body {
   min-height: 100vh;
-  background: radial-gradient(1000px 700px at 50% -5%, #16281f, #0a1512);
+  background: radial-gradient(1000px 100% at 50% -5%, #16281f, #0a1512);
 }
 .app-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: clamp(22px, 1vw, 111px);
-  max-height: 100vh;
+  gap: clamp(39px, 1vw, 111px);
   width: 100%;
 }
 .nav-container {
@@ -109,7 +108,8 @@ body {
 .adkar-components {
   display: flex;
   flex-direction: column;
-  width: 390px;
+  width: 40%;
+  max-width: 390px;
   height: 272px;
   border-radius: 20px;
   background-color: #16281f;
@@ -117,7 +117,38 @@ body {
   padding: 28px;
   gap: 10px;
 }
+@media (max-width: 768px) {
+  .Adkar-Components-Continer {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .adkar-components {
+    width: 70%;
+  }
+
+  .adkar-components h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .adkar-components h3 {
+    font-size: 1.7rem;
+  }
+  .adkar-components {
+    width: 70%;
+  }
+}
+
+@media (max-width: 375px) {
+  .adkar-components {
+    width: 80%;
+  }
+  .footer {
+    font-size: 1.6rem !important;
+  }
+}
 .first-line-adkar-components {
   display: flex;
   align-items: center;
@@ -148,7 +179,8 @@ body {
   font-size: 15px;
   font-weight: bold;
   font-family: "Noto Kufi Arabic";
-  width: 332px;
+  width: 100%;
+  max-width: 332px;
   height: 52px;
   color: #14231f;
   background-color: #d9b65e;
@@ -172,11 +204,11 @@ body {
 
 .footer {
   display: flex;
-  height: 20vh;
+  height: 30vh;
   color: #c79a45;
   font-size: 32px;
   font-family: "Amiri";
-  margin-top: auto;
+  margin-top: uto;
   margin: auto auto;
   align-items: end;
 }
